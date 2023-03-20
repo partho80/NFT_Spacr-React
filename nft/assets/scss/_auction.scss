@@ -1,0 +1,20 @@
+
+/* ====================================================
+   LIVE AUCTION SECTION
+ ====================================================== */
+.live-auction-wrapper {
+
+    &::before {
+        display: none;
+    }
+
+    .items-card-wrapper {
+        &:hover {
+            .card-thumb {
+                transform: scale(1);
+            }
+        }
+    }
+    
+    
+}

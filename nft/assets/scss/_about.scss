@@ -1,0 +1,172 @@
+/* ====================================================
+    HOW IT WORKS SECTION
+ ====================================================== */
+.how-works-wrapper {
+    .how-works-card {
+        background-color: $color-dark;
+        padding: 20px;
+        border-radius: 10px;
+        transition: all 0.3s ease-in-out;
+        min-height: 100%;
+
+        &:hover {
+            transform: translateY(-5px);
+
+            .card-heading {
+                color: $color-primary;
+            }
+        }
+
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $color-grey-1;
+            font-size: 30px;
+            border: 1px solid rgba($color: $color-primary, $alpha: 0.3);
+            border-radius: 5px;
+        }
+
+        .card-heading {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+}
+
+/* ====================================================
+    ACTIVITY SECTION
+ ====================================================== */
+.activity-wrapper {
+    h4 {
+        color: $color-white;
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+
+    .activity-filter {
+        background-color: $color-dark-2;
+        padding: 20px;
+        border-radius: 10px;
+        position: sticky;
+        top: 90px;
+
+        @media (max-width: 991px) {
+            position: static;
+        }
+
+        .filter-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+
+            .filter-item {
+
+                &.skltbs-active {
+                    button {
+                        background-color: $color-primary;
+                        color: $color-white;
+                    }
+                }
+               
+            }
+
+            button {
+                padding: 5px 20px;
+                border-radius: 5px;
+                background-color: $color-dark;
+                color: $color-white;
+                transition: all .3s ease-in-out;
+                font-weight: 400;
+                border: $grey-border;
+            }
+        }
+    }
+
+    .activity-box {
+        background-color: $color-dark-2;
+        padding: 30px 20px;
+        margin: 0 auto;
+        border-radius: 10px;
+    }
+
+    .activity-card {
+        background-color: $color-dark;
+        padding: 20px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+        @media(max-width: 575px) {
+            gap: 10px;
+         }
+
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+
+        .card-avatar {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+
+            @media(max-width: 575px) {
+               width: 60px;
+               height: 60px;
+            }
+        }
+
+        .card-info {
+            .name {
+                color: $color-white;
+                line-height: 20px;
+                margin-bottom: 5px;
+                font-size: 16px;
+                text-transform: capitalize;
+            }
+
+            .event {
+                font-size: 16px;
+                color: $color-grey-1;
+                margin-top: 5px;
+                margin-bottom: 0px;
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 5px;
+
+                 a {
+                    color: $color-primary;
+                }
+            }
+
+            .meta {
+                font-size: 12px;
+                color: $color-grey-1;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+            }
+        }
+
+        .activity-event {
+            margin-left: auto;
+            justify-self: flex-end;
+
+          
+
+            i {
+                font-size: 28px;
+                color: $color-primary;
+
+                  @media(max-width: 575px) {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}

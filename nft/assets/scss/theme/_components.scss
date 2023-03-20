@@ -1,0 +1,226 @@
+/* ====================================================
+    SECTIONS GAPS
+ ====================================================== */
+.section-padding {
+    padding: 120px 0px;
+
+    @media (max-width: 767px) {
+        padding: 60px 0px;
+    }
+
+}
+
+
+/* ====================================================
+    HEADINGS AND TEXT
+ ====================================================== */
+
+.body-text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    color: $color-grey-1;
+
+    &.light {
+        color: $color-white;
+    }
+}
+
+.heading-tertiary {
+    font-size: 25px;
+    font-weight: 600;
+    color: $color-white;
+
+    @media (max-width: 575px) {
+        font-size: 20px;
+    }
+}
+
+.section-head {
+    margin-bottom: 60px;
+
+    @media (max-width: 767px) {
+        margin-bottom: 40px;
+    }
+
+    .heading-primary {
+        font-size: 35px;
+        color: $color-white;
+        font-weight: 700;
+        position: relative;
+
+        @media (max-width: 575px) {
+            font-size: 25px;
+        }
+
+        &::after {
+            content: "";
+            width: 80px;
+            height: 4px;
+            background-image: $gradient-1;
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            border-radius: 5px;
+        }
+
+        .gradient {
+            background: $gradient-1;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+}
+
+/* ====================================================
+    BUTTONS
+ ====================================================== */
+
+.button {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 400;
+    width: max-content;
+
+    &.button-primary,
+    &.button-secondary {
+        padding: 10px 20px;
+        color: $color-white;
+        text-transform: capitalize;
+        border-radius: 5px;
+        transition: all 0.3s ease-in-out;
+        display: flex;
+        align-items: center;
+
+    }
+
+    &.button-primary {
+        background-image: $gradient-1;
+    }
+
+    &.button-secondary {
+        background-color: transparent;
+        border: 1px solid rgba($color-primary, 0.3);
+        color: rgba($color-white, 0.8);
+
+        &:hover{
+            background: rgba($color-primary, 0.8);
+        }
+    }
+
+    .icon {
+        display: inline-block;
+        margin-right: 5px;
+    }
+
+    &.radius {
+        border-radius: 25px;
+    }
+}
+
+/* ====================================================
+    OTHERS COMPONENTS
+ ====================================================== */
+.bg-cover {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.nice-select {
+    background-color: $color-dark;
+    color: $color-grey-1;
+    border: none;
+    font-weight: 400;
+
+    &::after {
+        width: 7px;
+        height: 7px;
+    }
+
+    .list {
+        background-color: $color-dark;
+    }
+
+    .option {
+        font-weight: 400;
+        &.selected,
+        &:hover {
+            background-color: $color-dark-2;
+        }
+    }
+
+    .option:not(:last-child) {
+        border-bottom: 1px solid rgba(51, 51, 51, 0.514);
+    }
+
+    .option:hover {
+        background-color: $color-dark-2;
+    }
+
+    .option.selected.focus {
+        background-color: transparent;
+    }
+}
+
+.section-button {
+    .button {
+        margin: 0 auto;
+        margin-top: 60px;
+
+        @media (max-width: 767px) {
+            margin-top: 40px;
+        }
+    }
+}
+
+// AUCTION COUNTDOWN
+.auction-countdown {
+    display: flex;
+    justify-content: space-around;
+    background-color: $color-dark;
+    position: absolute;
+    bottom: 0;
+    left: 40px;
+    right: 40px;
+    bottom: 5px;
+    border-radius: 10px;
+    padding: 5px 0px;
+    opacity: .9;
+
+    .single-count {
+        font-family: $heading-font;
+        font-weight: 500;
+        color: $color-white;
+    }
+
+    &.bigger {
+        left: 30px;
+        right: 30px;
+        bottom: 30px;
+        padding: 15px 0px;
+
+        .single-count {
+            font-size: 32px;
+            font-weight: 600;
+        }
+    }
+}
+
+.mouse-cursor{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: $gradient-1;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0.2;
+    transition: all .09s ease-out;
+    z-index: 99999;
+    // -webkit-filter: blur(200px);
+    // -moz-filter: blur(200px);
+    // filter: blur(50px);
+}

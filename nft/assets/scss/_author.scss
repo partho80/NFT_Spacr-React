@@ -1,0 +1,192 @@
+/* ====================================================
+    AUTHOR SECTION
+ ====================================================== */
+.author-profile-wrapper {
+    padding-bottom: 120px;
+
+    @media (max-width: 767px) {
+        padding-bottom: 60px;
+    }
+
+    .profile-cover {
+        height: 300px;
+    }
+
+    .author-details {
+        text-align: center;
+
+        .profile-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto;
+            margin-top: -60px;
+            border: 2px solid $color-primary;
+            position: relative;
+
+            .varified {
+                color: $color-white;
+                font-size: 8px;
+                background-color: $color-secondary;
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                right: 12px;
+                top: 6px;
+            }
+        }
+
+        .name {
+            font-size: 25px;
+            font-weight: 700;
+            color: $color-white;
+            margin-top: 20px;
+        }
+
+        .id {
+            color: $color-grey-1;
+            font-weight: 300;
+            font-size: 16px;
+        }
+
+        .numbers {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 10px;
+            margin-bottom: 20px;
+
+            .number,
+            .text {
+                font-size: 16px;
+                font-weight: 400;
+            }
+
+            .number {
+                color: $color-white;
+            }
+
+            .text {
+                color: $color-grey-1;
+            }
+        }
+
+        .profile-social-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin: 20px 0px;
+
+            a {
+                width: 50px;
+                height: 50px;
+                border: 1px solid rgba($color: $color-primary, $alpha: 0.3);
+                color: $color-grey-1;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                    border-color: $color-primary;
+                    color: $color-white;
+                    background-color: $color-primary;
+                    transform: translateY(-5px);
+                }
+            }
+        }
+    }
+
+    .author-follow-btn {
+        margin: 0 auto;
+        margin-top: 30px;
+        border-color: $color-grey-1;
+        border: 1px solid rgba($color: $color-grey-1, $alpha: 0.3);
+        & .icon{
+            margin-right: 5px;
+        }
+    }
+}
+
+/* ====================================================
+    AUTHOR TAB
+ ====================================================== */
+.author-items-tab {
+    margin-top: 120px;
+
+    @media (max-width: 991px) {
+        margin-top: 60px;
+    }
+
+    .tab-buttons {
+        display: flex;
+        gap: 15px;
+
+        .tab-button {
+            padding: 5px 20px;
+            border-radius: 5px;
+            background-color: $color-dark;
+            color: $color-white;
+            transition: all .3s ease-in-out;
+            font-weight: 500;
+            border: $grey-border;
+
+            &.skltbs-active {
+                border-color: $color-primary;
+                color: $color-white;
+                background-color: $color-primary;
+            }
+        }
+    }
+
+    .skltbs-panel-group {
+        margin-top: 60px;
+    }
+}
+
+/* ====================================================
+    CONNECT WALLET
+ ====================================================== */
+.connect-wallet-wrapper {
+    .connect-wallet-card {
+        background-color: $color-dark;
+        padding: 20px;
+        border-radius: 10px;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+        min-height: 100%;
+
+        &:hover {
+            transform: translateY(-10px);
+
+            .card-heading {
+                color: $color-primary;
+            }
+        }
+
+        .card-icon {
+            width: 70px;
+            height: 70px;
+        }
+
+        .card-heading {
+            margin: 10px 0px;
+            transition: all 0.3s ease;
+        }
+
+        .card-text {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-line-clamp: 4;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+
+        }
+    }
+}

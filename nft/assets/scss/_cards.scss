@@ -1,0 +1,333 @@
+/* ====================================================
+    ALL CARDS STYLES
+ ====================================================== */
+
+.items-card-wrapper {
+    max-width: 295px;
+    background-color: $color-dark;
+    border-radius: 10px;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+
+    &:hover {
+        .card-thumb {
+            transform: scale(1.1);
+        }
+    }
+
+    .card-thumb {
+        width: 100%;
+        height: 180px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        transition: transform 0.4s ease-in-out;
+    }
+
+    .card-content {
+        padding: 20px 10px;
+        color: $color-white;
+        overflow: hidden;
+        position: relative;
+        background-color: $color-dark;
+
+        .content-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .item-name {
+                color: $color-white;
+            }
+
+            .stock {
+                font-size: 14px;
+                font-weight: 400;
+                color: $color-grey-1;
+            }
+        }
+
+        .item-author {
+            display: flex;
+            align-items: center;
+            margin: 15px 0px;
+
+            .author-avatar {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                margin-right: 10px;
+                border: 1px solid $color-primary;
+            }
+
+            .author-name {
+                color: $color-grey-1;
+                font-weight: 300;
+                font-size: 16px;
+            }
+        }
+
+        .item-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-top: 30px;
+
+            .card-link {
+                padding: 0;
+                font-size: 14px;
+                text-transform: none;
+                border-width: 1px;
+                font-weight: 500;
+                border: none;
+                color: $color-white;
+                transition: all .3s ease-in-out;
+                &:hover{
+                    color: $color-primary;
+                }
+            }
+
+            .item-price {
+                display: flex;
+                align-items: center;
+                .icon {
+                    img {
+                        max-width: 20px;
+                    }
+                }
+
+                .price {
+                    font-size: 20px;
+                    color: $color-white;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+
+    .card-like {
+        font-size: 18px;
+        color: $color-secondary;
+        position: absolute;
+        left: 5px;
+        top: 5px;
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        cursor: pointer;
+
+        i {
+            font-weight: 300;
+        }
+
+        &.liked {
+            i {
+                font-weight: 700;
+                transition: font-weight 0.4s ease-in-out;
+            }
+        }
+    }
+}
+
+/* ====================================================
+    ARTIST CARD
+ ====================================================== */
+.artist-card {
+    max-width: 200px;
+    background-color: $color-dark;
+    border-radius: 10px;
+    margin: 0 auto;
+
+    .card-thumb {
+        height: 90px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .card-content {
+        padding: 10px;
+        text-align: center;
+
+        .artist-avatar-wrapper {
+            .artist-avatar {
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
+                margin: 0 auto;
+                margin-top: -40px;
+                border: 2px solid $color-primary;
+                position: relative;
+            }
+
+            .varified {
+                color: $color-white;
+                font-size: 8px;
+                background-color: $color-secondary;
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                right: 2px;
+                top: 2px;
+            }
+        }
+
+        .artist-info {
+            display: flex;
+            justify-content: space-around;
+
+            p,
+            .net-items {
+                color: $color-grey-1;
+                font-weight: 400;
+                font-size: 14px;
+
+                span {
+                    color: $color-primary;
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        .artist-name {
+            font-size: 20px;
+            margin: 5px 0px;
+        }
+
+        .follow-btn {
+            margin: 0 auto;
+            width: 40px;
+            height: 30px;
+            margin-top: 10px;
+            font-size: 14px;
+            font-weight: 400;
+            color: $color-white;
+            text-transform: capitalize;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+            border: 1px solid $color-grey-1;
+
+            .icon {
+                i {
+                    font-weight: 400;
+                    transition: all 0.3s ease-in-out;
+                    color: $color-grey-1;
+                }
+            }
+
+            &.followed {
+                .icon {
+                    i {
+                        font-weight: 700;
+                        color: $color-primary;
+                    }
+                }
+            }
+        }
+    }
+
+    .author-socials {
+        margin-top: 10px;
+        a {
+            color: $color-grey-1;
+
+            &:hover {
+                color: $color-primary;
+            }
+        }
+    }
+}
+
+/* ====================================================
+    TOP SELLER
+ ====================================================== */
+.top-seller-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: $color-dark;
+    border-radius: 10px;
+
+    @media (max-width: 400px) {
+        padding: 10px;
+    }
+
+    .card-thumb {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        border: 2px solid $color-primary;
+        position: relative;
+
+        @media (max-width: 400px) {
+            width: 50px;
+            height: 50px;
+        }
+
+        .varified {
+            color: $color-white;
+            font-size: 8px;
+            background-color: $color-secondary;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            right: 2px;
+            top: 2px;
+        }
+    }
+
+    .card-info {
+        .title {
+            color: $color-white;
+            font-size: 22px;
+
+            @media (max-width: 575px) {
+                font-size: 18px;
+            }
+        }
+
+        .items {
+            display: inline-block;
+            color: $color-grey-1;
+            margin-top: 6px;
+        }
+    }
+
+    .button {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 1px solid rgba($color: $color-primary, $alpha: 0.3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $color-grey-1;
+        transition: all 0.3s ease-in-out;
+
+        i {
+            font-weight: 200;
+        }
+
+        &:hover{
+            background: rgba($color: $color-primary, $alpha: 0.8);
+            color: $color-white;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+/* =================================================================================
+
+    Template Name: NFTSpace - NFT Buy & Sell HTML 5 Template
+    Description: This a NFT create and sell HTML 5 template based bootstrap 5.
+    Author: LuminousLabs
+    Author URI:  https://themeforest.net/user/luminouslabs
+    Version: 1.0.0
+
+=================================================================================== */
+
+// IMPORT THEME
+@import "./theme/default";
+@import "./theme/variables";
+@import "./theme/typography";
+@import "./theme/components";
+@import "./theme/scrollTop";
+@import "./theme/animations";
+@import './theme/preloader';
+
+// IMPORT SECTIONS
+@import "./header";
+@import "./cards";
+@import "./hero";
+@import "./items";
+@import './auction';
+@import "./mobile-nav";
+@import "./about";
+@import "./explore";
+@import "./author";
+@import "./form";
+@import "./blog";
+@import "./footer";
