@@ -1,3 +1,6 @@
+import Footer from "./component/Footer/Footer"
+import Header from "./component/Header/Header"
+import Activity from "./pages/Activity"
 import Home from "./pages/Home"
 
 
@@ -6,7 +9,10 @@ function App() {
 
   return (
     <div>
-      <Home/>
+      
+      <Header />
+      <Activity />
+      <Footer/>
    </div>
   )
 }
